@@ -1,0 +1,22 @@
+{
+  "name": "vue3-website",
+  "version": "1.0.0",
+  "description": "A Vue 3 project using JavaScript",
+  "main": "src/main.js",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "vue": "^3.2.0",
+    "vue-router": "^4.0.0"
+  },
+  "devDependencies": {
+    "@vue/cli-service": "^5.0.9",
+    "eslint": "^7.0.0",
+    "eslint-plugin-vue": "^7.0.0"
+  },
+  "author": "",
+  "license": "MIT"
+}
