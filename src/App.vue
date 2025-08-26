@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <div><router-link :to="{ name: 'Home', query: { msg: ' '}}">回首頁</router-link></div>
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
      <router-view />
   </div>

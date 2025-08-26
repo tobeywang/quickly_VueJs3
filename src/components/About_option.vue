@@ -8,9 +8,10 @@
 export default {
   // 特徵1：data 選項
   data() {
+    const route = this.$route;
     return {
       count: 0,
-      message: 'Hello, Option API !'
+      message: route.query.msg ? 'Hello ' + route.query.msg : 'Hello, Default Option API  !'
     };
   },
   // 特徵2：methods 選項
