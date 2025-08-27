@@ -1,0 +1,8 @@
+# 忽略所有 .lock 檔案
+*.lock
+
+# 忽略 node_modules 目錄下的所有內容
+node_modules/
+
+# 忽略名為 server.js 的檔案
+server.js
