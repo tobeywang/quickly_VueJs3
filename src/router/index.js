@@ -1,9 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from '../components/HelloWorld.vue';
-import About from '../components/About.vue';
-import About_option from '../components/About_option.vue';
-import ApiAxios from '../components/ApiAxios.vue';
-import GridForm from '../components/GridForm.vue';
+import Home from '../views/HelloWorld.vue';
 
 const routes = [
   {
@@ -14,27 +10,48 @@ const routes = [
   {
     path: '/about',
     name: 'About',
-    component: About
+      // 使用動態載入，只有在訪問此頁面時才會載入檔案
+    component:()=>import('../views/About.vue') 
   },
   {
     path: '/about_option',
     name: 'About_Option',
-    component: About_option
+    component:()=>import('../views/About_option.vue') 
   },
   {
     path: '/api',
     name: 'ApiAxios',
-    component: ApiAxios
+    component:()=>import('../views/ApiAxios.vue') 
   },
   {
     path: '/gridform',
     name: 'GridForm',
-    component: GridForm
+    component:()=>import('../views/GridForm.vue') 
+  },
+  {
+    path: '/basics',
+    name: 'Basics',
+    component:()=>import('../views/BasicsPage.vue') 
+  },
+  {
+    path: '/todo',
+    name: 'TodoPage',
+    component:()=>import('../views/TodoPage.vue')  
+  },
+  {
+    path: '/component-comm',
+    name: 'component-comm',
+    component:()=>import('../components/TodoPage.vue') 
+  },
+  {
+    path: '/apiDataPage',
+    name: 'apiDataPage',
+    component:()=>import('../views/ApiDataPage.vue') 
   }
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(process.env.BASE_URL),
   routes
 });
 
